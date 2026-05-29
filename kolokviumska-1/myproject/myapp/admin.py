@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .forms import CakeForm
 from .models import *
 
 
@@ -23,6 +24,7 @@ class BakerAdmin(admin.ModelAdmin):
 
 @admin.register(Cake)
 class CakeAdmin(admin.ModelAdmin):
+    form = CakeForm
     list_display = ["name", "baker", "price", "weight"]
 
     def has_change_permission(self, request, obj=None):
