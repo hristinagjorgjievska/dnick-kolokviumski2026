@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid" style="background-size: cover; height:500px; background-image: url('{% static 'images/mbr-1920x1277.jpg' %}')">
+    <div class="d-flex flex-column mb-3">
+        <div class="p-2"><p class="fw-bold mt-5 pt-3">2025-21</p></div>
+        <div class="p-2"><p class="fw-bold">THE BEST SOLUTIONS FOR OUR CLIENTS</p></div>
+        <div class="p-2"><p class="display-3">We create exclusive events<br>using modern technologies<br>and extensive features.</p></div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">
+    <div class="row row-cols-3">
+        <div class="col border-start border-end">
+
+            <div class="d-flex flex-column mb-3 align-items-center">
+                <div class="p-2" style="height: 200px"></div>
+                <div class="p-2"><img src="{% static 'images/mbr-502x282.jpeg' %}"></div>
+
+                <div class="p-2 display-6">Early night TV show</div>
+
+                <div class="p-2">Lorem ipsum dolor sit amet consectuter adipiscting elit. Eaque, incidunt iure hic, quisquarm nihli ut quiderm aperiam.</div>
+
+                <div class="p-2"><a href="#">4 participants</a></div>
+            </div>
+
+        </div>
+
+
+        <div class="col border-start border-end">
+            <div class="d-flex flex-column mb-3 align-items-center">
+                <div class="p-2"><img src="{% static 'images/mbr-502x669.jpeg' %}"></div>
+
+                <div class="p-2 display-6">My Bd Party</div>
+
+                <div class="p-2">Lorem ipsum dolor sit amet consectuter adipiscting elit. Eaque, incidunt iure hic, quisquarm nihli ut quiderm aperiam.</div>
+
+                <div class="p-2"><a href="#">32 participants</a></div>
+            </div>
+        </div>
+
+
+        <div class="col border-start border-end" style="height: 500px">
+<div class="d-flex flex-column mb-3 align-items-center">
+                <div class="p-2" style="height: 400px"></div>
+                <div class="p-2"><img src="{% static 'images/mbr-500x334.jpeg' %}"></div>
+
+                <div class="p-2 display-6">10th Anniversary</div>
+
+                <div class="p-2">Lorem ipsum dolor sit amet consectuter adipiscting elit. Eaque, incidunt iure hic, quisquarm nihli ut quiderm aperiam.</div>
+
+                <div class="p-2"><a href="#">12 participants</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

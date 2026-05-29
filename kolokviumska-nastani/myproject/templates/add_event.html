@@ -1,0 +1,25 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-md mt-5">
+  <div class="row row-cols-2">
+    <div class="col-4"></div>
+    <div class="col border-start border-end">
+      <h1 class="display-5">Ask for event</h1>
+      <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-dark" type="submit">Add event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
