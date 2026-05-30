@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        a{
+            color: black;
+            margin-right:15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-md pt-5">
+        <div class="row row-cols-2">
+            <div class="col-4">
+                <p class="border border-secondary ms-5 p-3" style="width: 200px;">DNIChK TRAVEL</p>
+            </div>
+            <div class="col text-end">
+                <a href="#">Service</a>
+                <a href="{% url 'add_destination' %}">Destination</a>
+                <a href="#">Booking</a>
+                <a href="#">Testimonial</a>
+                <a href="#">Login</a>
+                <a href="#" class="border border-secondary p-2">Sign Up</a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

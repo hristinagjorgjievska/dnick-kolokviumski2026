@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-md text-center pt-5">
+  <h6>Top Selling</h6>
+  <h1>Top Destinations</h1>
+</div>
+
+<div class="container-fluid pt-5">
+  <div class="row row-cols-3">
+    {% for destination in destinations %}
+    <div class="col">
+      <div class="card" style="width: 22rem;">
+          {% if destination.image %}
+            <img src="{{ destination.image.url }}" class="card-img-top" alt="...">
+          {% endif %}
+          <div class="card-body">
+            <div class="row row-cols-2">
+              <div class="col">
+                <h5 class="card-title">{{ destination.destination }}</h5>
+              </div>
+              <div class="col">
+                <p class="text-end">${{ destination.price }}</p>
+              </div>
+            </div>
+            <p>{{ destination.duration }} Days Trip</p>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
