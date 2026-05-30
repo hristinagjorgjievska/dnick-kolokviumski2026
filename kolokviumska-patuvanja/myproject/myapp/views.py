@@ -13,7 +13,7 @@ def add_destination(request):
         if form.is_valid():
             tour = form.save(commit=False)
             tour.tour_guide = request.user.tourguide
-            tour.full_clean() 
+            tour.full_clean()
             tour.save()
             return redirect('index')
     form = TravelForm()
