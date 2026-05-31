@@ -1,0 +1,64 @@
+
+
+<!--<div class="row row-cols-3 p-5">-->
+<!--    <div class="col-2"></div>-->
+
+<!--    <div class="col-8 border bg-secondary-subtle">-->
+<!--        <div>-->
+
+<!--            <h2 class="text-danger text-center fw-bold">Add new cake</h2>-->
+
+<!--            <div class="container-md" style="width: 400px;">-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="name" class="form-label">Name</label>-->
+<!--                    <input type="email" class="form-control" id="name" aria-describedby="emailHelp">-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="price" class="form-label">Price</label>-->
+<!--                    <input type="email" class="form-control" id="price" aria-describedby="emailHelp">-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="weight" class="form-label">Weight</label>-->
+<!--                    <input type="email" class="form-control" id="weight" aria-describedby="emailHelp">-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="description" class="form-label">Description</label>-->
+<!--                    <input type="email" class="form-control" id="description" aria-describedby="emailHelp">-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                    <label for="image" class="form-label">Choose an image</label>-->
+<!--                    <input class="form-control" type="file" id="image">-->
+<!--                </div>-->
+<!--                <div class="mb-3">-->
+<!--                      <button type="submit" class="btn btn-danger">Submit</button>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="col-2"></div>-->
+<!--</div>-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-md pt-5">
+  <div class="row row-cols-2">
+    <div class="col-4 border border-black p-5">
+      <h1>Add New Cake</h1>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-danger" type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

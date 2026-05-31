@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid bg-danger p-5" style="height:500px;">
+  <div class="row row-cols-2 d-flex align-items-center justify-content-center">
+    <div class="col ps-5">
+      <div class="d-flex flex-column mb-3">
+          <div class="p-2"><h1 class="display-4 text-white">Explore the wonderland of tastes!</h1></div>
+          <div class="p-2"><h5 class="text-body-tertiary">Assignment for HCI in January 2025</h5></div>
+          <div class="p-2"><button class="btn btn btn-light btn-lg">Get Started</button>    <button type="button" class="btn btn-outline-light btn-lg">Learn More</button></div>
+      </div>
+    </div>
+
+    <div class="col header">
+        <img class="header" src="../static/images/cake1.png">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-danger-subtle d-flex align-items-center justify-content-center" style="height:400px">
+  <div class="row row-cols-3">
+    <div class="col"></div>
+
+    <div class="col">
+        <h5 class="text-center">''Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley.''</h5>
+
+      <div class="text-center"><img src="../static/images/person1.png"> <span>John Doe / CEO, Cakery&Bakery</span></div>
+
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>
+
+<div class="container-fluid p-5">
+
+  <div class="text-center">
+    <h3 class="text-danger">Products</h3>
+    <p>Add more products in the edit form</p>
+  </div>
+
+  <div class="container-md">
+    <div class="row row-cols-3">
+      {% for cake in cakes %}
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+        <img src="{{  cake.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ cake.name }}</h5>
+          <p class="card-text">{{ cake.price }}</p>
+          <p class="card-text">{{ cake.baker.name}}</p>
+        </div>
+      </div>
+    </div>
+
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
